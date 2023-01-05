@@ -8,6 +8,10 @@ import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
+import { Link as RouterLink} from "react-router-dom";
+import  { Link as LinkMUI }  from "@mui/material";
+import { Button } from '@mui/material';
+
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -73,6 +77,20 @@ export default function Header({search,setSearch}) {
           >
             TheDay
           </Typography>
+
+          {/* <LinkMUI 
+              component={
+                RouterLink  
+              } to={`/Keeper`}
+               >
+              Go To Keeper
+          </LinkMUI> */}
+
+          <Button LinkComponent={
+            RouterLink
+          } to={'/Keeper'} >
+          Keeper App
+          </Button>
           <Search>
             <SearchIconWrapper>
               <SearchIcon />
