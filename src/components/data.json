@@ -1,6 +1,7 @@
 {
     "semesters": [
         {
+            "index": 0,
             "subjects": [
                 {
                     "name": "Mathematics 0",
@@ -101,6 +102,7 @@
             ]
         },
         {
+            "index": 1,
             "subjects": [
                 {
                     "name": "Calculas 1",
@@ -386,6 +388,1289 @@
                             "day": "Friday",
                             "time": "8:00 AM",
                             "room": "250"
+                        }
+                    ],
+                    "description": "This is a description of the subject"
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "subjects": [
+                {
+                    "name": "Mathematics 0",
+                    "appreviation": "CALC0",
+                    "doctor": "Dr. John Doe",
+                    "material": [
+                        {
+                            "type": "text",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "video",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "audio",
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "Previous Exams": [
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "schdule": [
+                        {
+                            "day": "Monday",
+                            "time": "8:00 AM",
+                            "room": "105"
+                        },
+                        {
+                            "day": "Wednesday",
+                            "time": "8:00 AM",
+                            "room": "105"
+                        },
+                        {
+                            "day": "Friday",
+                            "time": "8:00 AM",
+                            "room": "105"
+                        }
+                    ],
+                    "description": "This is a description of the subject"
+                },
+                {
+                    "name": "ESP 0",
+                    "appreviation": "ESP0",
+                    "doctor": "Dr. Not John Doe",
+                    "material": [
+                        {
+                            "type": "text",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "video",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "audio",
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "Previous Exams": [
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "schdule": [
+                        {
+                            "day": "Monday",
+                            "time": "8:00 AM",
+                            "room": "105"
+                        },
+                        {
+                            "day": "Wednesday",
+                            "time": "8:00 AM",
+                            "room": "105"
+                        },
+                        {
+                            "day": "Friday",
+                            "time": "8:00 AM",
+                            "room": "105"
+                        }
+                    ],
+                    "description": "This is a description of the subject"
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "subjects": [
+                {
+                    "name": "Calculas 1",
+                    "appreviation": "CALC1",
+                    "doctor": "Dr. Zenab",
+                    "material": [
+                        {
+                            "type": "text",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "video",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "audio",
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "Previous Exams": [
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "schdule": [
+                        {
+                            "day": "Monday",
+                            "time": "8:00 AM",
+                            "room": "105"
+                        },
+                        {
+                            "day": "Wednesday",
+                            "time": "8:00 AM",
+                            "room": "105"
+                        },
+                        {
+                            "day": "Friday",
+                            "time": "8:00 AM",
+                            "room": "105"
+                        }
+                    ],
+                    "description": "This is a description of the subject"
+                },
+                {
+                    "name": "ESP 0",
+                    "appreviation": "ESP0",
+                    "doctor": "Dr. Not John Doe",
+                    "material": [
+                        {
+                            "type": "text",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "video",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "audio",
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "Previous Exams": [
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "schdule": [
+                        {
+                            "day": "Monday",
+                            "time": "8:00 AM",
+                            "room": "250"
+                        },
+                        {
+                            "day": "Wednesday",
+                            "time": "8:00 AM",
+                            "room": "250"
+                        },
+                        {
+                            "day": "Friday",
+                            "time": "8:00 AM",
+                            "room": "250"
+                        }
+                    ],
+                    "description": "This is a description of the subject"
+                },
+                {
+                    "name": "Introduction to Information Systems",
+                    "appreviation": "IS",
+                    "doctor": "Dr. Not John Doe",
+                    "material": [
+                        {
+                            "type": "text",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "video",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "audio",
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "Previous Exams": [
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "schdule": [
+                        {
+                            "day": "Monday",
+                            "time": "8:00 AM",
+                            "room": "250"
+                        },
+                        {
+                            "day": "Wednesday",
+                            "time": "8:00 AM",
+                            "room": "250"
+                        },
+                        {
+                            "day": "Friday",
+                            "time": "8:00 AM",
+                            "room": "250"
+                        }
+                    ],
+                    "description": "This is a description of the subject"
+                },
+                {
+                    "name": "Introduction to computers",
+                    "appreviation": "IC",
+                    "doctor": "Dr. Zenab",
+                    "material": [
+                        {
+                            "type": "text",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "video",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "audio",
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "Previous Exams": [
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "schdule": [
+                        {
+                            "day": "Monday",
+                            "time": "8:00 AM",
+                            "room": "105"
+                        },
+                        {
+                            "day": "Wednesday",
+                            "time": "8:00 AM",
+                            "room": "105"
+                        },
+                        {
+                            "day": "Friday",
+                            "time": "8:00 AM",
+                            "room": "105"
+                        }
+                    ],
+                    "description": "This is a description of the subject"
+                },
+                {
+                    "name": "ESP 0",
+                    "appreviation": "ESP0",
+                    "doctor": "Dr. Not John Doe",
+                    "material": [
+                        {
+                            "type": "text",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "video",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "audio",
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "Previous Exams": [
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "schdule": [
+                        {
+                            "day": "Monday",
+                            "time": "8:00 AM",
+                            "room": "250"
+                        },
+                        {
+                            "day": "Wednesday",
+                            "time": "8:00 AM",
+                            "room": "250"
+                        },
+                        {
+                            "day": "Friday",
+                            "time": "8:00 AM",
+                            "room": "250"
+                        }
+                    ],
+                    "description": "This is a description of the subject"
+                },
+                {
+                    "name": "Fundmentals of business",
+                    "appreviation": "BUS",
+                    "doctor": "Dr. Not John Doe",
+                    "material": [
+                        {
+                            "type": "text",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "video",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "audio",
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "Previous Exams": [
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "schdule": [
+                        {
+                            "day": "Monday",
+                            "time": "8:00 AM",
+                            "room": "250"
+                        },
+                        {
+                            "day": "Wednesday",
+                            "time": "8:00 AM",
+                            "room": "250"
+                        },
+                        {
+                            "day": "Friday",
+                            "time": "8:00 AM",
+                            "room": "250"
+                        }
+                    ],
+                    "description": "This is a description of the subject"
+                }
+            ]
+        },
+        {
+            "index": 4,
+            "subjects": [
+                {
+                    "name": "Mathematics 0",
+                    "appreviation": "CALC0",
+                    "doctor": "Dr. John Doe",
+                    "material": [
+                        {
+                            "type": "text",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "video",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "audio",
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "Previous Exams": [
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "schdule": [
+                        {
+                            "day": "Monday",
+                            "time": "8:00 AM",
+                            "room": "105"
+                        },
+                        {
+                            "day": "Wednesday",
+                            "time": "8:00 AM",
+                            "room": "105"
+                        },
+                        {
+                            "day": "Friday",
+                            "time": "8:00 AM",
+                            "room": "105"
+                        }
+                    ],
+                    "description": "This is a description of the subject"
+                },
+                {
+                    "name": "ESP 0",
+                    "appreviation": "ESP0",
+                    "doctor": "Dr. Not John Doe",
+                    "material": [
+                        {
+                            "type": "text",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "video",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "audio",
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "Previous Exams": [
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "schdule": [
+                        {
+                            "day": "Monday",
+                            "time": "8:00 AM",
+                            "room": "105"
+                        },
+                        {
+                            "day": "Wednesday",
+                            "time": "8:00 AM",
+                            "room": "105"
+                        },
+                        {
+                            "day": "Friday",
+                            "time": "8:00 AM",
+                            "room": "105"
+                        }
+                    ],
+                    "description": "This is a description of the subject"
+                }
+            ]
+        },
+        {
+            "index": 5,
+            "subjects": [
+                {
+                    "name": "Calculas 1",
+                    "appreviation": "CALC1",
+                    "doctor": "Dr. Zenab",
+                    "material": [
+                        {
+                            "type": "text",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "video",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "audio",
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "Previous Exams": [
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "schdule": [
+                        {
+                            "day": "Monday",
+                            "time": "8:00 AM",
+                            "room": "105"
+                        },
+                        {
+                            "day": "Wednesday",
+                            "time": "8:00 AM",
+                            "room": "105"
+                        },
+                        {
+                            "day": "Friday",
+                            "time": "8:00 AM",
+                            "room": "105"
+                        }
+                    ],
+                    "description": "This is a description of the subject"
+                },
+                {
+                    "name": "ESP 0",
+                    "appreviation": "ESP0",
+                    "doctor": "Dr. Not John Doe",
+                    "material": [
+                        {
+                            "type": "text",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "video",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "audio",
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "Previous Exams": [
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "schdule": [
+                        {
+                            "day": "Monday",
+                            "time": "8:00 AM",
+                            "room": "250"
+                        },
+                        {
+                            "day": "Wednesday",
+                            "time": "8:00 AM",
+                            "room": "250"
+                        },
+                        {
+                            "day": "Friday",
+                            "time": "8:00 AM",
+                            "room": "250"
+                        }
+                    ],
+                    "description": "This is a description of the subject"
+                },
+                {
+                    "name": "Introduction to Information Systems",
+                    "appreviation": "IS",
+                    "doctor": "Dr. Not John Doe",
+                    "material": [
+                        {
+                            "type": "text",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "video",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "audio",
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "Previous Exams": [
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "schdule": [
+                        {
+                            "day": "Monday",
+                            "time": "8:00 AM",
+                            "room": "250"
+                        },
+                        {
+                            "day": "Wednesday",
+                            "time": "8:00 AM",
+                            "room": "250"
+                        },
+                        {
+                            "day": "Friday",
+                            "time": "8:00 AM",
+                            "room": "250"
+                        }
+                    ],
+                    "description": "This is a description of the subject"
+                },
+                {
+                    "name": "Introduction to computers",
+                    "appreviation": "IC",
+                    "doctor": "Dr. Zenab",
+                    "material": [
+                        {
+                            "type": "text",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "video",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "audio",
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "Previous Exams": [
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "schdule": [
+                        {
+                            "day": "Monday",
+                            "time": "8:00 AM",
+                            "room": "105"
+                        },
+                        {
+                            "day": "Wednesday",
+                            "time": "8:00 AM",
+                            "room": "105"
+                        },
+                        {
+                            "day": "Friday",
+                            "time": "8:00 AM",
+                            "room": "105"
+                        }
+                    ],
+                    "description": "This is a description of the subject"
+                },
+                {
+                    "name": "ESP 0",
+                    "appreviation": "ESP0",
+                    "doctor": "Dr. Not John Doe",
+                    "material": [
+                        {
+                            "type": "text",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "video",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "audio",
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "Previous Exams": [
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "schdule": [
+                        {
+                            "day": "Monday",
+                            "time": "8:00 AM",
+                            "room": "250"
+                        },
+                        {
+                            "day": "Wednesday",
+                            "time": "8:00 AM",
+                            "room": "250"
+                        },
+                        {
+                            "day": "Friday",
+                            "time": "8:00 AM",
+                            "room": "250"
+                        }
+                    ],
+                    "description": "This is a description of the subject"
+                },
+                {
+                    "name": "Fundmentals of business",
+                    "appreviation": "BUS",
+                    "doctor": "Dr. Not John Doe",
+                    "material": [
+                        {
+                            "type": "text",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "video",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "audio",
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "Previous Exams": [
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "schdule": [
+                        {
+                            "day": "Monday",
+                            "time": "8:00 AM",
+                            "room": "250"
+                        },
+                        {
+                            "day": "Wednesday",
+                            "time": "8:00 AM",
+                            "room": "250"
+                        },
+                        {
+                            "day": "Friday",
+                            "time": "8:00 AM",
+                            "room": "250"
+                        }
+                    ],
+                    "description": "This is a description of the subject"
+                }
+            ]
+        },
+        {
+            "index": 6,
+            "subjects": [
+                {
+                    "name": "Mathematics 0",
+                    "appreviation": "CALC0",
+                    "doctor": "Dr. John Doe",
+                    "material": [
+                        {
+                            "type": "text",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "video",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "audio",
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "Previous Exams": [
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "schdule": [
+                        {
+                            "day": "Monday",
+                            "time": "8:00 AM",
+                            "room": "105"
+                        },
+                        {
+                            "day": "Wednesday",
+                            "time": "8:00 AM",
+                            "room": "105"
+                        },
+                        {
+                            "day": "Friday",
+                            "time": "8:00 AM",
+                            "room": "105"
+                        }
+                    ],
+                    "description": "This is a description of the subject"
+                },
+                {
+                    "name": "ESP 0",
+                    "appreviation": "ESP0",
+                    "doctor": "Dr. Not John Doe",
+                    "material": [
+                        {
+                            "type": "text",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "video",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "audio",
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "Previous Exams": [
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "schdule": [
+                        {
+                            "day": "Monday",
+                            "time": "8:00 AM",
+                            "room": "105"
+                        },
+                        {
+                            "day": "Wednesday",
+                            "time": "8:00 AM",
+                            "room": "105"
+                        },
+                        {
+                            "day": "Friday",
+                            "time": "8:00 AM",
+                            "room": "105"
+                        }
+                    ],
+                    "description": "This is a description of the subject"
+                }
+            ]
+        },
+        {
+            "index": 7,
+            "subjects": [
+                {
+                    "name": "Calculas 1",
+                    "appreviation": "CALC1",
+                    "doctor": "Dr. Zenab",
+                    "material": [
+                        {
+                            "type": "text",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "video",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "audio",
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "Previous Exams": [
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "schdule": [
+                        {
+                            "day": "Monday",
+                            "time": "8:00 AM",
+                            "room": "105"
+                        },
+                        {
+                            "day": "Wednesday",
+                            "time": "8:00 AM",
+                            "room": "105"
+                        },
+                        {
+                            "day": "Friday",
+                            "time": "8:00 AM",
+                            "room": "105"
+                        }
+                    ],
+                    "description": "This is a description of the subject"
+                },
+                {
+                    "name": "ESP 0",
+                    "appreviation": "ESP0",
+                    "doctor": "Dr. Not John Doe",
+                    "material": [
+                        {
+                            "type": "text",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "video",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "audio",
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "Previous Exams": [
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "schdule": [
+                        {
+                            "day": "Monday",
+                            "time": "8:00 AM",
+                            "room": "250"
+                        },
+                        {
+                            "day": "Wednesday",
+                            "time": "8:00 AM",
+                            "room": "250"
+                        },
+                        {
+                            "day": "Friday",
+                            "time": "8:00 AM",
+                            "room": "250"
+                        }
+                    ],
+                    "description": "This is a description of the subject"
+                },
+                {
+                    "name": "Introduction to Information Systems",
+                    "appreviation": "IS",
+                    "doctor": "Dr. Not John Doe",
+                    "material": [
+                        {
+                            "type": "text",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "video",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "audio",
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "Previous Exams": [
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "schdule": [
+                        {
+                            "day": "Monday",
+                            "time": "8:00 AM",
+                            "room": "250"
+                        },
+                        {
+                            "day": "Wednesday",
+                            "time": "8:00 AM",
+                            "room": "250"
+                        },
+                        {
+                            "day": "Friday",
+                            "time": "8:00 AM",
+                            "room": "250"
+                        }
+                    ],
+                    "description": "This is a description of the subject"
+                },
+                {
+                    "name": "Introduction to computers",
+                    "appreviation": "IC",
+                    "doctor": "Dr. Zenab",
+                    "material": [
+                        {
+                            "type": "text",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "video",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "audio",
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "Previous Exams": [
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "schdule": [
+                        {
+                            "day": "Monday",
+                            "time": "8:00 AM",
+                            "room": "105"
+                        },
+                        {
+                            "day": "Wednesday",
+                            "time": "8:00 AM",
+                            "room": "105"
+                        },
+                        {
+                            "day": "Friday",
+                            "time": "8:00 AM",
+                            "room": "105"
+                        }
+                    ],
+                    "description": "This is a description of the subject"
+                },
+                {
+                    "name": "ESP 0",
+                    "appreviation": "ESP0",
+                    "doctor": "Dr. Not John Doe",
+                    "material": [
+                        {
+                            "type": "text",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "video",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "audio",
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "Previous Exams": [
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "schdule": [
+                        {
+                            "day": "Monday",
+                            "time": "8:00 AM",
+                            "room": "250"
+                        },
+                        {
+                            "day": "Wednesday",
+                            "time": "8:00 AM",
+                            "room": "250"
+                        },
+                        {
+                            "day": "Friday",
+                            "time": "8:00 AM",
+                            "room": "250"
+                        }
+                    ],
+                    "description": "This is a description of the subject"
+                },
+                {
+                    "name": "Fundmentals of business",
+                    "appreviation": "BUS",
+                    "doctor": "Dr. Not John Doe",
+                    "material": [
+                        {
+                            "type": "text",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "video",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "audio",
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "Previous Exams": [
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "schdule": [
+                        {
+                            "day": "Monday",
+                            "time": "8:00 AM",
+                            "room": "250"
+                        },
+                        {
+                            "day": "Wednesday",
+                            "time": "8:00 AM",
+                            "room": "250"
+                        },
+                        {
+                            "day": "Friday",
+                            "time": "8:00 AM",
+                            "room": "250"
+                        }
+                    ],
+                    "description": "This is a description of the subject"
+                }
+            ]
+        },
+        {
+            "index": 8,
+            "subjects": [
+                {
+                    "name": "Mathematics 0",
+                    "appreviation": "CALC0",
+                    "doctor": "Dr. John Doe",
+                    "material": [
+                        {
+                            "type": "text",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "video",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "audio",
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "Previous Exams": [
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "schdule": [
+                        {
+                            "day": "Monday",
+                            "time": "8:00 AM",
+                            "room": "105"
+                        },
+                        {
+                            "day": "Wednesday",
+                            "time": "8:00 AM",
+                            "room": "105"
+                        },
+                        {
+                            "day": "Friday",
+                            "time": "8:00 AM",
+                            "room": "105"
+                        }
+                    ],
+                    "description": "This is a description of the subject"
+                },
+                {
+                    "name": "ESP 0",
+                    "appreviation": "ESP0",
+                    "doctor": "Dr. Not John Doe",
+                    "material": [
+                        {
+                            "type": "text",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "video",
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "type": "audio",
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "Previous Exams": [
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        },
+                        {
+                            "url": "http://www.google.com"
+                        }
+                    ],
+                    "schdule": [
+                        {
+                            "day": "Monday",
+                            "time": "8:00 AM",
+                            "room": "105"
+                        },
+                        {
+                            "day": "Wednesday",
+                            "time": "8:00 AM",
+                            "room": "105"
+                        },
+                        {
+                            "day": "Friday",
+                            "time": "8:00 AM",
+                            "room": "105"
                         }
                     ],
                     "description": "This is a description of the subject"

@@ -6,7 +6,6 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import Chip from '@mui/material/Chip';
-import { Grid } from '@mui/material';
 import { Box } from '@mui/material';
 
 
@@ -23,9 +22,11 @@ export default function AlertDialog({label,subjects}) {
 
   return (
     <div>
+      
       <Chip label={label} clickable onClick={handleClickOpen}  />
 
       <Dialog
+
         open={open}
         onClose={handleClose}
         aria-labelledby="alert-dialog-title"
@@ -36,21 +37,16 @@ export default function AlertDialog({label,subjects}) {
         </DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-  <Box sx={{m : 2}}>
-    <Grid container spacing={2} >
-      <Grid item xs={4}>
-          <Chip label={"Materials"}  clickable/>
-      </Grid>
-      <Grid item xs={4}>
+  <Box display="flex" sx={{m : 1}}>
 
-          <Chip label={"Previous Exams"} clickable/>
-      </Grid>
-          <Grid item xs={4}>
+          <Chip sx={{m:2}} label={"Materials"}  clickable/>
 
-          <Chip label={"schdule"} clickable/>
-      </Grid>
+
+          <Chip sx={{m:2}} label={"Previous Exams"} clickable/>
     
-    </Grid>
+
+          <Chip sx={{m:2}} label={"schdule"} clickable/>
+
   </Box>
           </DialogContentText>
         </DialogContent>

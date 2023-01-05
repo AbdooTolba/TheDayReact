@@ -5,8 +5,17 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import { Typography } from '@mui/material';
-import * as data from "./data.json"
+import data from "./data.json"
 import Dialog from './Dialog';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+  },
+});
+
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -16,15 +25,20 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-function App() {
 
-  let d = JSON.parse(JSON.stringify(data));
+function App() {
+  const [search, setSearch] = React.useState("");
+  
+
+  // let d = JSON.parse(JSON.stringify(data));
   // console.log(d[0].subjects.map((data) => (data.name)));
 
   // console.log(d.semesters.map((d,index) => (d.subjects)));
 
   return <>
-    <Header /> 
+      <ThemeProvider theme={darkTheme}>
+      <CssBaseline />
+    <Header value={search} setSearch={setSearch}/> 
 
   <Box sx={{m : 2}}>
     <Grid container spacing={2} >
@@ -36,15 +50,15 @@ function App() {
         5-Appreviation
         .filter?
       */}
-  { d.semesters.map((semesters,index) => (
+  { data.semesters.filter((x) => x.subjects.filter(((y) => y.name.includes(search) || y.appreviation.includes(search) || y.doctor.includes(search))).length > 0).map((item) => (
 
     <Grid item xs={4}>
         <Item >
           <Typography sx={{marginBottom : 3}}>
-            Semester {index}
+            Semester {item.index}
           </Typography>
           <Grid container spacing={2}  sx={{marginBottom : 3}}>
-        { d.semesters[index].subjects.map((subjects) =>(
+        { item.subjects.filter(((y) => y.name.includes(search) || y.appreviation.includes(search) || y.doctor.includes(search))).map((subjects) =>(
             <Grid item >
               <Dialog label={subjects.appreviation} subjects={subjects} />
             </Grid>
@@ -57,6 +71,7 @@ function App() {
     }
     </Grid>
   </Box>
+        </ThemeProvider>
   </>;
 }
 
