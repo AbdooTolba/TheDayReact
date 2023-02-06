@@ -5,6 +5,7 @@ import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Material from "./Material";
+import Schedule from "./Schedule";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -52,7 +53,9 @@ export default function VerticalTabs(props) {
         flexGrow: 1,
         bgcolor: "background.paper",
         display: "flex",
-        height: "91vh",
+        position: "relative",
+        height: "100%",
+        width: "100vw",
       }}
     >
       <Tabs
@@ -71,10 +74,10 @@ export default function VerticalTabs(props) {
         <Material {...props} />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Item Two
+        <Schedule {...props} />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Item Three
+        {"Not Yet :)"}
       </TabPanel>
     </Box>
   );

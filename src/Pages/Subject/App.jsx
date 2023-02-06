@@ -18,13 +18,15 @@ function App() {
   const subjects = data.semesters.map((semester) =>
     semester.subjects.filter((subject) => subject.appreviation === subjectID)
   );
-  const subject = subjects[1][0];
+  const subject = subjects
+    .filter((subject) => subject.length > 0)
+    .map((subject) => subject[0]);
 
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Header title={subject.name} isSearch={false} />
-      <Tabs {...subject} />
+      <Header title={subject[0].name} isSearch={false} />
+      <Tabs {...subject[0]} />
     </ThemeProvider>
   );
 }
