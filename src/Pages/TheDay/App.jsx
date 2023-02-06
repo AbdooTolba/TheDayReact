@@ -5,7 +5,7 @@ import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import { Typography } from "@mui/material";
-import data from "../Data/data.json";
+import data from "../../Data/data.json";
 import Dialog from "./Dialog";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -53,9 +53,11 @@ function App() {
                 (x) =>
                   x.subjects.filter(
                     (y) =>
-                      y.name.includes(search) ||
-                      y.appreviation.includes(search) ||
-                      y.doctor.includes(search)
+                      y.name.toLowerCase().includes(search.toLowerCase()) ||
+                      y.appreviation
+                        .toLowerCase()
+                        .includes(search.toLowerCase()) ||
+                      y.doctor.toLowerCase().includes(search.toLowerCase())
                   ).length > 0
               )
               .map((item) => (
@@ -68,9 +70,15 @@ function App() {
                       {item.subjects
                         .filter(
                           (y) =>
-                            y.name.includes(search) ||
-                            y.appreviation.includes(search) ||
-                            y.doctor.includes(search)
+                            y.name
+                              .toLowerCase()
+                              .includes(search.toLowerCase()) ||
+                            y.appreviation
+                              .toLowerCase()
+                              .includes(search.toLowerCase()) ||
+                            y.doctor
+                              .toLowerCase()
+                              .includes(search.toLowerCase())
                         )
                         .map((subjects) => (
                           <Grid item>

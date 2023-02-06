@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./components/App.jsx";
+import App from "./Pages/TheDay/App";
 import Keeper from "./Pages/Keeper/App";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
