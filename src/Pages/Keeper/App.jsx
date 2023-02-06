@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
-import Header from "./Header.jsx";
+import Header from "../../components/Header";
 import Note from "./Note.jsx";
 import Grid from "@mui/material/Grid";
 import FormDialog from "./FormDialog.jsx";
 import { useState } from "react";
-
+import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
+import { CssBaseline } from "@mui/material";
 const App = () => {
   const [search, setSearch] = useState("");
 
@@ -14,9 +15,16 @@ const App = () => {
     setNotes(notes.filter((n) => n !== item));
   };
 
+  const theme = createTheme({
+    palette: {
+      mode: "dark",
+    },
+  });
+
   return (
-    <>
-      <Header setSearch={setSearch} search={search} />
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Header title="Keeper" setSearch={setSearch} search={search} />
       <Grid sx={{ marginTop: 10 }} container spacing={2}>
         {notes
           .filter((n) => n.title.includes(search) || n.body.includes(search))
@@ -33,7 +41,7 @@ const App = () => {
       </Grid>
 
       <FormDialog setNotes={setNotes} />
-    </>
+    </ThemeProvider>
   );
 };
 

@@ -1,5 +1,5 @@
 import * as React from "react";
-import Header from "./Header";
+import Header from "../../components/Header";
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
@@ -36,7 +36,7 @@ function App() {
     <>
       <ThemeProvider theme={darkTheme}>
         <CssBaseline />
-        <Header value={search} setSearch={setSearch} />
+        <Header title="TheDay" value={search} setSearch={setSearch} />
 
         <Box sx={{ m: 2 }}>
           <Grid container spacing={2}>

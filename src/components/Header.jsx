@@ -10,7 +10,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import { Link as RouterLink } from "react-router-dom";
 import { Link as LinkMUI } from "@mui/material";
-import { Button } from "@mui/material";
+import SpeakerNotesIcon from "@mui/icons-material/SpeakerNotes";
+import CrisisAlertIcon from "@mui/icons-material/CrisisAlert";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -54,7 +55,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export default function Header({ search, setSearch }) {
+export default function Header({ search, setSearch, title }) {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -74,7 +75,7 @@ export default function Header({ search, setSearch }) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           >
-            TheDay
+            {title}
           </Typography>
 
           {/* <LinkMUI 
@@ -84,10 +85,29 @@ export default function Header({ search, setSearch }) {
                >
               Go To Keeper
           </LinkMUI> */}
-
-          <Button LinkComponent={RouterLink} to={"/Keeper"}>
-            Keeper App
-          </Button>
+          {/* 2 icons first for theday route and the other for Keeper route */}
+          <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="open drawer"
+            sx={{ mr: 2 }}
+            component={RouterLink}
+            to={`/`}
+          >
+            <CrisisAlertIcon />
+          </IconButton>
+          <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="open drawer"
+            sx={{ mr: 2 }}
+            component={RouterLink}
+            to={`/keeper`}
+          >
+            <SpeakerNotesIcon />
+          </IconButton>
           <Search>
             <SearchIconWrapper>
               <SearchIcon />
