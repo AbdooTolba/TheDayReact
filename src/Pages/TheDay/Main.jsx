@@ -56,7 +56,7 @@ function Main({ search }) {
                       <Grid item>
                         <Dialog
                           label={subjects.appreviation}
-                          subjects={subjects}
+                          subject={subjects}
                         />
                       </Grid>
                     ))}

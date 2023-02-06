@@ -18,7 +18,12 @@ function App() {
     <>
       <ThemeProvider theme={darkTheme}>
         <CssBaseline />
-        <Header title="TheDay" value={search} setSearch={setSearch} />
+        <Header
+          title="TheDay"
+          value={search}
+          setSearch={setSearch}
+          isSearch={true}
+        />
         <Main search={search} />
       </ThemeProvider>
     </>

@@ -18,7 +18,12 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Header title="Keeper" setSearch={setSearch} search={search} />
+      <Header
+        title="Keeper"
+        setSearch={setSearch}
+        search={search}
+        isSearch={true}
+      />
       <Box
         sx={{
           m: 2,

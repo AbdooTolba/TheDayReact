@@ -10,7 +10,7 @@ function Main({ search }) {
     setNotes(notes.filter((n) => n !== item));
   };
   return (
-    <Grid sx={{ marginTop: 10 }} container spacing={2}>
+    <Grid sx={{ marginTop: 2 }} container spacing={2}>
       {notes
         .filter((n) => n.title.includes(search) || n.body.includes(search))
         .map((item, index) => (

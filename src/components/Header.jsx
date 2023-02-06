@@ -55,7 +55,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export default function Header({ search, setSearch, title }) {
+export default function Header({ search, setSearch, title, isSearch }) {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -70,7 +70,7 @@ export default function Header({ search, setSearch, title }) {
             <MenuIcon />
           </IconButton> */}
           <Typography
-            variant="h6"
+            variant="h5"
             noWrap
             component="div"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
@@ -108,17 +108,19 @@ export default function Header({ search, setSearch, title }) {
           >
             <SpeakerNotesIcon />
           </IconButton>
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              inputProps={{ "aria-label": "search" }}
-            />
-          </Search>
+          {isSearch && (
+            <Search>
+              <SearchIconWrapper>
+                <SearchIcon />
+              </SearchIconWrapper>
+              <StyledInputBase
+                placeholder="Search…"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                inputProps={{ "aria-label": "search" }}
+              />
+            </Search>
+          )}
         </Toolbar>
       </AppBar>
     </Box>
