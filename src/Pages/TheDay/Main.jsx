@@ -38,7 +38,11 @@ function Main({ search }) {
           )
           .map((item) => (
             <Grid item xs={4}>
-              <Item>
+              <Item
+                sx={{
+                  minHeight: "100%",
+                }}
+              >
                 <Typography sx={{ marginBottom: 3 }}>
                   Semester {item.index}
                 </Typography>
@@ -65,6 +69,10 @@ function Main({ search }) {
             </Grid>
           ))}
       </Grid>
+      <br />
+      <Typography variant="h1" sx={{ mt: 30, textAlign: "center" }}>
+        {"Not Yet :)"}
+      </Typography>
     </Box>
   );
 }

@@ -51,7 +51,6 @@ export default function VerticalTabs(props) {
     <Box
       sx={{
         flexGrow: 1,
-        bgcolor: "background.paper",
         display: "flex",
         position: "relative",
         height: "100%",
