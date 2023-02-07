@@ -1,15 +1,8 @@
 import Header from "../../components/Header";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import Tabs from "./Tabs";
 import { useParams } from "react-router-dom";
 import data from "../../Data/data.json";
-
-const theme = createTheme({
-  palette: {
-    mode: "dark",
-  },
-});
 
 function App() {
   const { subjectID } = useParams();
@@ -23,11 +16,11 @@ function App() {
     .map((subject) => subject[0]);
 
   return (
-    <ThemeProvider theme={theme}>
+    <>
       <CssBaseline />
       <Header title={subject[0].name} isSearch={false} />
       <Tabs {...subject[0]} />
-    </ThemeProvider>
+    </>
   );
 }
 

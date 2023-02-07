@@ -65,10 +65,8 @@ export default function Header({ search, setSearch, title, isSearch }) {
       <AppBar
         position="static"
         sx={{
-          height: "5rem",
-          "@media (min-width: 899)": {
-            height: "10rem",
-          },
+          height: { sm: "5rem", xs: "4rem" },
+
           display: "flex",
           justifyContent: "center",
         }}
@@ -90,7 +88,7 @@ export default function Header({ search, setSearch, title, isSearch }) {
             sx={{
               flexGrow: 1,
               display: "block",
-              fontSize: { sm: "1.5rem", xs: "2.5rem" },
+              fontSize: { sm: "1.5rem", xs: "1.5rem" },
             }}
           >
             {title}
