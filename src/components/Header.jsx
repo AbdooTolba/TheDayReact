@@ -22,7 +22,7 @@ const Search = styled("div")(({ theme }) => ({
   },
   marginLeft: 0,
   width: "100%",
-  [theme.breakpoints.up("sm")]: {
+  [theme.breakpoints.up("xs")]: {
     marginLeft: theme.spacing(1),
     width: "auto",
   },
@@ -46,7 +46,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create("width"),
     width: "100%",
-    [theme.breakpoints.up("sm")]: {
+    [theme.breakpoints.up("xs")]: {
       width: "12ch",
       "&:focus": {
         width: "20ch",
@@ -57,8 +57,22 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export default function Header({ search, setSearch, title, isSearch }) {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+    <Box
+      sx={{
+        flexGrow: 1,
+      }}
+    >
+      <AppBar
+        position="static"
+        sx={{
+          height: {
+            md: "5rem",
+            sm: "6rem",
+          },
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
         <Toolbar>
           {/* <IconButton
             size="large"
@@ -73,7 +87,11 @@ export default function Header({ search, setSearch, title, isSearch }) {
             variant="h5"
             noWrap
             component="div"
-            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
+            sx={{
+              flexGrow: 1,
+              display: "block",
+              fontSize: { md: "3rem", xs: "4rem" },
+            }}
           >
             {title}
           </Typography>
@@ -95,7 +113,15 @@ export default function Header({ search, setSearch, title, isSearch }) {
             component={RouterLink}
             to={`/`}
           >
-            <CrisisAlertIcon />
+            <CrisisAlertIcon
+              sx={{
+                height: {
+                  md: "1.5rem",
+                  sm: "2.5rem",
+                },
+                width: "auto",
+              }}
+            />
           </IconButton>
           <IconButton
             size="large"
@@ -106,10 +132,25 @@ export default function Header({ search, setSearch, title, isSearch }) {
             component={RouterLink}
             to={`/keeper`}
           >
-            <SpeakerNotesIcon />
+            <SpeakerNotesIcon
+              sx={{
+                height: {
+                  md: "1.5rem",
+                  sm: "2.5rem",
+                },
+                width: "auto",
+              }}
+            />
           </IconButton>
           {isSearch && (
-            <Search>
+            <Search
+              sx={{
+                height: {
+                  md: "2rem",
+                  xs: "2.5rem",
+                },
+              }}
+            >
               <SearchIconWrapper>
                 <SearchIcon />
               </SearchIconWrapper>

@@ -19,6 +19,7 @@ function Material({
             {item}
           </Typography>
           <Box
+            key={index}
             sx={{
               height: "30vh",
               width: "70vw",
