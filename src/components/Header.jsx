@@ -73,7 +73,6 @@ export default function Header({ search, setSearch, title, isSearch }) {
       >
         <Toolbar>
           {/* <IconButton
-            size="large"
             edge="start"
             color="inherit"
             aria-label="open drawer"
@@ -103,7 +102,6 @@ export default function Header({ search, setSearch, title, isSearch }) {
           </LinkMUI> */}
           {/* 2 icons first for theday route and the other for Keeper route */}
           <IconButton
-            size="large"
             edge="start"
             color="inherit"
             aria-label="open drawer"
@@ -113,16 +111,21 @@ export default function Header({ search, setSearch, title, isSearch }) {
           >
             <CrisisAlertIcon
               sx={{
+                p: {
+                  xs: 0,
+                },
+                m: {
+                  xs: 0,
+                },
                 height: {
                   sm: "1.5rem",
-                  xs: "2rem",
+                  xs: "1.5rem",
                 },
                 width: "auto",
               }}
             />
           </IconButton>
           <IconButton
-            size="large"
             edge="start"
             color="inherit"
             aria-label="open drawer"
@@ -132,9 +135,15 @@ export default function Header({ search, setSearch, title, isSearch }) {
           >
             <SpeakerNotesIcon
               sx={{
+                p: {
+                  xs: 0,
+                },
+                m: {
+                  xs: 0,
+                },
                 height: {
                   sm: "1.5rem",
-                  xs: "2rem",
+                  xs: "1.5rem",
                 },
                 width: "auto",
               }}
@@ -143,9 +152,19 @@ export default function Header({ search, setSearch, title, isSearch }) {
           {isSearch && (
             <Search
               sx={{
+                p: {
+                  xs: 0,
+                },
+                ml: {
+                  sm: "auto",
+                  xs: "0",
+                },
                 height: {
-                  sm: "2rem",
+                  sm: "2.5rem",
                   xs: "2.5rem",
+                },
+                width: {
+                  xs: "10rem",
                 },
               }}
             >
