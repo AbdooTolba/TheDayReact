@@ -42,7 +42,8 @@ function App() {
               margin: "auto",
 
               width: "100%",
-              maxWidth: "80%",
+
+              maxWidth: { sm: "80%", xs: "100%" },
               position: "relative",
               pb: 50,
             }}

@@ -14,7 +14,7 @@ function Main({ search }) {
       {notes
         .filter((n) => n.title.includes(search) || n.body.includes(search))
         .map((item, index) => (
-          <Grid key={index} item xs={12} sm={6}>
+          <Grid key={index} item xs={12} xs={6}>
             <Note
               title={item.title}
               body={item.body}

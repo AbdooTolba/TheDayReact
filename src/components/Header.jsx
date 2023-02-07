@@ -65,9 +65,9 @@ export default function Header({ search, setSearch, title, isSearch }) {
       <AppBar
         position="static"
         sx={{
-          height: {
-            md: "5rem",
-            sm: "6rem",
+          height: "5rem",
+          "@media (min-width: 899)": {
+            height: "10rem",
           },
           display: "flex",
           justifyContent: "center",
@@ -90,7 +90,7 @@ export default function Header({ search, setSearch, title, isSearch }) {
             sx={{
               flexGrow: 1,
               display: "block",
-              fontSize: { md: "3rem", xs: "4rem" },
+              fontSize: { sm: "1.5rem", xs: "2.5rem" },
             }}
           >
             {title}
@@ -116,8 +116,8 @@ export default function Header({ search, setSearch, title, isSearch }) {
             <CrisisAlertIcon
               sx={{
                 height: {
-                  md: "1.5rem",
-                  sm: "2.5rem",
+                  sm: "1.5rem",
+                  xs: "2rem",
                 },
                 width: "auto",
               }}
@@ -135,8 +135,8 @@ export default function Header({ search, setSearch, title, isSearch }) {
             <SpeakerNotesIcon
               sx={{
                 height: {
-                  md: "1.5rem",
-                  sm: "2.5rem",
+                  sm: "1.5rem",
+                  xs: "2rem",
                 },
                 width: "auto",
               }}
@@ -146,7 +146,7 @@ export default function Header({ search, setSearch, title, isSearch }) {
             <Search
               sx={{
                 height: {
-                  md: "2rem",
+                  sm: "2rem",
                   xs: "2.5rem",
                 },
               }}

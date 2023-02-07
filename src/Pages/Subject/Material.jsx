@@ -1,4 +1,5 @@
-import { Box, Paper, Typography } from "@mui/material";
+import { Box, Paper, Typography, Grid } from "@mui/material";
+import "./Material.css";
 
 function Material({
   name,
@@ -11,55 +12,55 @@ function Material({
 }) {
   return (
     <>
-      {/* sections of weeks which every week is a div that can be slided horizontally with overflow-x */}
-
       {["Lectures", "Sections", "Whitenning"].map((item, index) => (
-        <>
+        <Paper sx={{}}>
           <Typography variant="h4" sx={{ margin: "1rem" }}>
             {item}
           </Typography>
           <Box
+            className="material__section"
             key={index}
             sx={{
-              height: "30vh",
               width: "70vw",
-              display: "flex",
-              overflow: "auto",
-              whiteSpace: "nowrap",
-              gap: "2rem",
+              height: "70vh",
+              maxHeight: "70vh",
+              display: "grid",
+              overflowY: "scroll",
+              p: 2,
+              gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+              gap: ".2rem",
             }}
           >
             {[
               1, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1,
               1, 1, 1, 1, 1, 1,
             ].map((x) => (
-              <>
-                <Box>
-                  <Typography variant="h6">Title</Typography>
-                  <Paper
-                    elevation={500}
-                    sx={{
-                      cursor: "pointer",
-                      p: 4,
-                      m: 1,
-                      ml: 0,
-                      height: "70%",
-                      minWidth: "10%",
-                      userSelect: "none",
-                      textAlign: "center",
-                    }}
-                  >
-                    {x === 1 ? (
-                      <Typography variant="h5">PDF</Typography>
-                    ) : (
-                      <Typography variant="h5">IMG</Typography>
-                    )}
-                  </Paper>
-                </Box>
-              </>
+              <Box>
+                <Typography variant="h6">Title</Typography>
+                <Paper
+                  elevation={20}
+                  sx={{
+                    flexBasis: "50%",
+                    cursor: "pointer",
+                    p: 4,
+                    m: 1,
+                    ml: 0,
+                    height: "25vh",
+                    minWidth: "10%",
+                    userSelect: "none",
+                    textAlign: "center",
+                  }}
+                >
+                  {x === 1 ? (
+                    <Typography variant="h5">PDF</Typography>
+                  ) : (
+                    <Typography variant="h5">IMG</Typography>
+                  )}
+                </Paper>
+              </Box>
             ))}
           </Box>
-        </>
+        </Paper>
       ))}
     </>
   );
