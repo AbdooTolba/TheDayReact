@@ -8,7 +8,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 
 export default function BasicCard({ title, body, handelDelete, item }) {
   return (
-    <Card sx={{ minWidth: 275 }}>
+    <Card>
       <CardContent>
         <Typography variant="h5" component="div">
           {title}
@@ -16,7 +16,7 @@ export default function BasicCard({ title, body, handelDelete, item }) {
 
         <Typography variant="body2">{body}</Typography>
         <Button
-          sx={{ position: "relative", left: "90%" }}
+          sx={{ position: "relative", right: "-85%" }}
           onClick={() => handelDelete(item)}
         >
           <IconButton aria-label="delete">
