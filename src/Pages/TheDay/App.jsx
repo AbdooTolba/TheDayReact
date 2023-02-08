@@ -36,6 +36,8 @@ function App() {
         <Paper
           sx={{
             // center it
+            p: "1rem",
+
             margin: "auto",
 
             width: "100%",

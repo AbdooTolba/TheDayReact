@@ -30,7 +30,6 @@ export default function AlertDialog({ label, subject }) {
         href={/subject/ + subject.appreviation}
         // onClick={handleClickOpen}
       />
-
       <Dialog
         open={open}
         onClose={handleClose}

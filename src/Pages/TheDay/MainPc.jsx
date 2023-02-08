@@ -8,10 +8,13 @@ import Paper from "@mui/material/Paper";
 
 function Mainpc({ search }) {
   const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+    backgroundColor: theme.palette.mode === "dark" ? "#121212" : "#fff",
     ...theme.typography.body2,
     padding: theme.spacing(1),
     textAlign: "center",
+    borderBottom: "1px solid #1e1e1e",
+    //   shadow
+    boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.75)",
     color: theme.palette.text.secondary,
   }));
 
