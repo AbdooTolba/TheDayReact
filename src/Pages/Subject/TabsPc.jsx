@@ -4,6 +4,7 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
+
 import Material from "./Material";
 import Schedule from "./Schedule";
 
@@ -51,10 +52,13 @@ export default function VerticalTabs(props) {
     <Box
       sx={{
         flexGrow: 1,
-        display: "flex",
         position: "relative",
         height: "100%",
         width: "100vw",
+        display: {
+          xs: "none",
+          sm: "flex",
+        },
       }}
     >
       <Tabs

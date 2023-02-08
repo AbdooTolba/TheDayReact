@@ -152,9 +152,6 @@ export default function Header({ search, setSearch, title, isSearch }) {
           {isSearch && (
             <Search
               sx={{
-                p: {
-                  xs: 0,
-                },
                 ml: {
                   sm: "auto",
                   xs: "0",

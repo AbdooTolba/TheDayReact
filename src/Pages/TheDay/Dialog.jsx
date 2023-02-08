@@ -20,8 +20,9 @@ export default function AlertDialog({ label, subject }) {
   };
 
   return (
-    <div>
+    <Box>
       <Chip
+        sx={{ width: "100%" }}
         className="subject__chip"
         label={label}
         clickable
@@ -74,6 +75,6 @@ export default function AlertDialog({ label, subject }) {
           <Button onClick={handleClose}>Close</Button>
         </DialogActions>
       </Dialog>
-    </div>
+    </Box>
   );
 }

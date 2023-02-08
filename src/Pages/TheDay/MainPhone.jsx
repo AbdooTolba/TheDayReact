@@ -69,11 +69,14 @@ function Mainpc({ search }) {
                   )
 
                   .map((subjects) => (
-                    <Grid item>
-                      <Dialog
-                        label={subjects.appreviation}
-                        subject={subjects}
-                      />
+                    <Grid
+                      item
+                      {
+                        //sx={{ width: "100%" }}  this one for the other look
+                        ..." "
+                      }
+                    >
+                      <Dialog label={subjects.name} subject={subjects} />
                     </Grid>
                   ))}
               </Grid>

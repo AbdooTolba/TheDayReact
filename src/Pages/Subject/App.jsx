@@ -1,8 +1,10 @@
 import Header from "../../components/Header";
 import CssBaseline from "@mui/material/CssBaseline";
-import Tabs from "./Tabs";
 import { useParams } from "react-router-dom";
 import data from "../../Data/data.json";
+
+import TabsPC from "./TabsPc";
+import TabsPhone from "./TabsPhone";
 
 function App() {
   const { subjectID } = useParams();
@@ -19,7 +21,16 @@ function App() {
     <>
       <CssBaseline />
       <Header title={subject[0].name} isSearch={false} />
-      <Tabs {...subject[0]} />
+      <TabsPC {...subject[0]} />
+      <TabsPhone
+        {...subject[0]}
+        sx={{
+          display: {
+            sm: "none",
+            xs: "block",
+          },
+        }}
+      />
     </>
   );
 }

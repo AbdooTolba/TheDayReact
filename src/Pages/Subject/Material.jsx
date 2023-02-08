@@ -1,5 +1,5 @@
 import { Box, Paper, Typography, Grid } from "@mui/material";
-import "./Material.css";
+import "./Styling/Material.css";
 
 function Material({
   name,
@@ -10,51 +10,82 @@ function Material({
   schdule,
   description,
 }) {
+  const containerStyle = {
+    display: "flex",
+    flexWrap: "noWrap",
+    justifyContent: "center",
+    width: "80vw",
+    overflowX: "scroll",
+  };
+
+  const itemStyle = {};
+
   return (
     <>
       {["Lectures", "Sections", "Whitenning"].map((item, index) => (
-        <Paper sx={{}}>
+        <Paper
+          sx={{
+            p: "0.5rem",
+            m: "1rem",
+          }}
+        >
           <Typography variant="h4" sx={{ margin: "1rem" }}>
             {item}
           </Typography>
           <Box
-            className="material__section"
+            className="Material_container"
             key={index}
-            sx={{
-              width: "70vw",
-              height: "70vh",
-              maxHeight: "70vh",
-              display: "grid",
-              overflowY: "scroll",
-              p: 2,
-              gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-              gap: ".2rem",
-            }}
+            style={containerStyle}
           >
             {[
               1, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1,
               1, 1, 1, 1, 1, 1,
             ].map((x) => (
-              <Box>
+              <Box
+                sx={{
+                  mr: "1rem",
+                  mb: "1rem",
+                }}
+              >
                 <Typography variant="h6">Title</Typography>
                 <Paper
+                  className="Material_item"
+                  style={itemStyle}
                   elevation={20}
                   sx={{
+                    aspectRatio: "2 / 3",
                     flexBasis: "50%",
                     cursor: "pointer",
                     p: 4,
                     m: 1,
                     ml: 0,
-                    height: "25vh",
-                    minWidth: "10%",
                     userSelect: "none",
                     textAlign: "center",
+                    width: "5vw",
+                    minHeight: "25vh",
+                    maxHeight: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                    border: "1px solid black",
+                    boxSizing: "border-box",
+                    minWidth: "100%",
+                    padding: "4rem",
                   }}
                 >
                   {x === 1 ? (
-                    <Typography variant="h5">PDF</Typography>
+                    <Typography
+                      variant="h5"
+                      sx={{ fontSize: { sm: "2vw", xs: "6vw" } }}
+                    >
+                      PDF
+                    </Typography>
                   ) : (
-                    <Typography variant="h5">IMG</Typography>
+                    <Typography
+                      variant="h5"
+                      sx={{ fontSize: { sm: "2vw", xs: "6vw" } }}
+                    >
+                      IMG
+                    </Typography>
                   )}
                 </Paper>
               </Box>
