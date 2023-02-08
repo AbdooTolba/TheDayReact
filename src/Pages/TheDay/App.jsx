@@ -7,6 +7,11 @@ import { Paper, Box } from "@mui/material";
 
 function App() {
   const [search, setSearch] = React.useState("");
+  React.useEffect(() => {
+    document.title = "TheDay";
+    document.getElementById("favicon").href =
+      "https://media.discordapp.net/attachments/1008571067398369291/1072747224586522714/Hotpot_1_2.png?width=270&height=270";
+  }, []);
 
   return (
     <>
@@ -19,7 +24,7 @@ function App() {
       />
       <Box
         sx={{
-          mt: "5%",
+          mt: { sm: "5%", xs: "10%" },
           position: "relative",
           display: "flex",
           flexDirection: "column",

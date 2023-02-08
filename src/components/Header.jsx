@@ -21,8 +21,12 @@ const Search = styled("div")(({ theme }) => ({
     backgroundColor: alpha(theme.palette.common.black, 0.25),
   },
   marginLeft: 0,
-  width: "100%",
+  width: "0%",
   [theme.breakpoints.up("xs")]: {
+    marginLeft: theme.spacing(0),
+    width: "auto",
+  },
+  [theme.breakpoints.up("sm")]: {
     marginLeft: theme.spacing(1),
     width: "auto",
   },
@@ -47,6 +51,12 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     transition: theme.transitions.create("width"),
     width: "100%",
     [theme.breakpoints.up("xs")]: {
+      width: "0ch",
+      "&:focus": {
+        width: "7ch",
+      },
+    },
+    [theme.breakpoints.up("sm")]: {
       width: "12ch",
       "&:focus": {
         width: "20ch",
@@ -150,21 +160,7 @@ export default function Header({ search, setSearch, title, isSearch }) {
             />
           </IconButton>
           {isSearch && (
-            <Search
-              sx={{
-                ml: {
-                  sm: "auto",
-                  xs: "0",
-                },
-                height: {
-                  sm: "2.5rem",
-                  xs: "2.5rem",
-                },
-                width: {
-                  xs: "10rem",
-                },
-              }}
-            >
+            <Search>
               <SearchIconWrapper>
                 <SearchIcon />
               </SearchIconWrapper>
