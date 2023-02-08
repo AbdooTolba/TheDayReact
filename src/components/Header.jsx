@@ -12,6 +12,7 @@ import { Link as RouterLink } from "react-router-dom";
 import { Link as LinkMUI } from "@mui/material";
 import SpeakerNotesIcon from "@mui/icons-material/SpeakerNotes";
 import CrisisAlertIcon from "@mui/icons-material/CrisisAlert";
+import Tooltip from "@mui/material/Tooltip";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -90,19 +91,25 @@ export default function Header({ search, setSearch, title, isSearch }) {
           >
             <MenuIcon />
           </IconButton> */}
-          <Typography
-            variant="h5"
-            noWrap
-            component="div"
-            sx={{
-              flexGrow: 1,
-              display: "block",
-              fontSize: { sm: "1.5rem", xs: "1.5rem" },
-            }}
-          >
-            {title}
-          </Typography>
-
+          <Tooltip title="Home" placement="bottom-start">
+            <Typography
+              variant="h5"
+              noWrap
+              component="div"
+              sx={{
+                flexGrow: 1,
+                display: "block",
+                fontSize: { sm: "1.5rem", xs: "1.5rem" },
+              }}
+            >
+              <RouterLink
+                to="/"
+                style={{ textDecoration: "none", color: "white" }}
+              >
+                {title}
+              </RouterLink>
+            </Typography>
+          </Tooltip>
           {/* <LinkMUI 
               component={
                 RouterLink  
@@ -111,67 +118,73 @@ export default function Header({ search, setSearch, title, isSearch }) {
               Go To Keeper
           </LinkMUI> */}
           {/* 2 icons first for theday route and the other for Keeper route */}
-          <IconButton
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 2 }}
-            component={RouterLink}
-            to={`/`}
-          >
-            <CrisisAlertIcon
-              sx={{
-                p: {
-                  xs: 0,
-                },
-                m: {
-                  xs: 0,
-                },
-                height: {
-                  sm: "1.5rem",
-                  xs: "1.5rem",
-                },
-                width: "auto",
-              }}
-            />
-          </IconButton>
-          <IconButton
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 2 }}
-            component={RouterLink}
-            to={`/keeper`}
-          >
-            <SpeakerNotesIcon
-              sx={{
-                p: {
-                  xs: 0,
-                },
-                m: {
-                  xs: 0,
-                },
-                height: {
-                  sm: "1.5rem",
-                  xs: "1.5rem",
-                },
-                width: "auto",
-              }}
-            />
-          </IconButton>
-          {isSearch && (
-            <Search>
-              <SearchIconWrapper>
-                <SearchIcon />
-              </SearchIconWrapper>
-              <StyledInputBase
-                placeholder="Search…"
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-                inputProps={{ "aria-label": "search" }}
+          <Tooltip title="The Day">
+            <IconButton
+              edge="start"
+              color="inherit"
+              aria-label="open drawer"
+              sx={{ mr: 2 }}
+              component={RouterLink}
+              to={`/`}
+            >
+              <CrisisAlertIcon
+                sx={{
+                  p: {
+                    xs: 0,
+                  },
+                  m: {
+                    xs: 0,
+                  },
+                  height: {
+                    sm: "1.5rem",
+                    xs: "1.5rem",
+                  },
+                  width: "auto",
+                }}
               />
-            </Search>
-          )}
+            </IconButton>
+          </Tooltip>
+          <Tooltip title="Keeper">
+            <IconButton
+              edge="start"
+              color="inherit"
+              aria-label="open drawer"
+              sx={{ mr: 2 }}
+              component={RouterLink}
+              to={`/keeper`}
+            >
+              <SpeakerNotesIcon
+                sx={{
+                  p: {
+                    xs: 0,
+                  },
+                  m: {
+                    xs: 0,
+                  },
+                  height: {
+                    sm: "1.5rem",
+                    xs: "1.5rem",
+                  },
+                  width: "auto",
+                }}
+              />
+            </IconButton>
+          </Tooltip>
+          <Tooltip title="Search">
+            {isSearch && (
+              <Search>
+                <SearchIconWrapper>
+                  <SearchIcon />
+                </SearchIconWrapper>
+                <StyledInputBase
+                  placeholder="Search…"
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
+                  inputProps={{ "aria-label": "search" }}
+                />
+              </Search>
+            )}
+          </Tooltip>
         </Toolbar>
       </AppBar>
     </Box>

@@ -9,6 +9,7 @@ import DialogTitle from "@mui/material/DialogTitle";
 import Fab from "@mui/material/Fab";
 import AddIcon from "@mui/icons-material/Add";
 import { useState } from "react";
+import Tooltip from "@mui/material/Tooltip";
 
 export default function FormDialog(props) {
   const [open, setOpen] = React.useState(false);
@@ -41,14 +42,16 @@ export default function FormDialog(props) {
 
   return (
     <div>
-      <Fab
-        color="primary"
-        aria-label="add"
-        onClick={handleClickOpen}
-        sx={{ position: "fixed", right: "10px", bottom: "10px" }}
-      >
-        <AddIcon />
-      </Fab>
+      <Tooltip title="Add">
+        <Fab
+          color="primary"
+          aria-label="add"
+          onClick={handleClickOpen}
+          sx={{ position: "fixed", right: "10px", bottom: "10px" }}
+        >
+          <AddIcon />
+        </Fab>
+      </Tooltip>
       <Dialog open={open} onClose={handleClose}>
         <DialogTitle>Keeper</DialogTitle>
         <DialogContent>

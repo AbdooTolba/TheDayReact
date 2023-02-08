@@ -1,12 +1,15 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 
 import Header from "../../components/Header";
 import CssBaseline from "@mui/material/CssBaseline";
 import { useParams } from "react-router-dom";
 import data from "../../Data/data.json";
 
-import TabsPC from "./TabsPc";
-import TabsPhone from "./TabsPhone";
+// import TabsPC from "./TabsPc";
+// import TabsPhone from "./TabsPhone";
+
+const TabsPC = lazy(() => import("./TabsPc"));
+const TabsPhone = lazy(() => import("./TabsPhone"));
 
 function App() {
   const { subjectID } = useParams();
@@ -27,16 +30,10 @@ function App() {
     <>
       <CssBaseline />
       <Header title={subject[0].name} isSearch={false} />
-      <TabsPC {...subject[0]} />
-      <TabsPhone
-        {...subject[0]}
-        sx={{
-          display: {
-            sm: "none",
-            xs: "block",
-          },
-        }}
-      />
+      <Suspense fallback={<div>Loading...</div>}>
+        <TabsPC {...subject[0]} />
+        <TabsPhone {...subject[0]} />
+      </Suspense>
     </>
   );
 }

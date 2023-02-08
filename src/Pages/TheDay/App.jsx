@@ -1,9 +1,10 @@
-import * as React from "react";
+import React, { Suspense, lazy } from "react";
 import Header from "../../components/Header";
-import Main from "./Main";
 
 import CssBaseline from "@mui/material/CssBaseline";
 import { Paper, Box } from "@mui/material";
+
+const Main = lazy(() => import("./Main"));
 
 function App() {
   const [search, setSearch] = React.useState("");
@@ -24,7 +25,7 @@ function App() {
       />
       <Box
         sx={{
-          mt: { sm: "5%", xs: "10%" },
+          mt: { sm: "2%", xs: "10%" },
           position: "relative",
           display: "flex",
           flexDirection: "column",
@@ -35,11 +36,6 @@ function App() {
       >
         <Paper
           sx={{
-            // center it
-            p: "1rem",
-
-            margin: "auto",
-
             width: "100%",
 
             maxWidth: { sm: "80%", xs: "100%" },
@@ -47,7 +43,9 @@ function App() {
             pb: 50,
           }}
         >
-          <Main search={search} />
+          <Suspense fallback={<div>Loading...</div>}>
+            <Main search={search} />
+          </Suspense>
         </Paper>
       </Box>
     </>

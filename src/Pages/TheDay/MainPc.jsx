@@ -52,9 +52,16 @@ function Mainpc({ search }) {
               <Item
                 sx={{
                   minHeight: "100%",
+                  transition: "all 0.2s",
+                  "&:hover": {
+                    WebkitBoxShadow: "0px 0px 5px 1px rgb(0 0 0 / 50%)",
+                    MozBoxShadow: "0px 0px 5px 1px rgba(0, 0, 0, 0.5)",
+                    boxShadow: "0px 0px 5px 1px rgb(0 0 0 / 50%)",
+                    transform: "scale(1.1)",
+                  },
                 }}
               >
-                <Typography sx={{ marginBottom: 3 }}>
+                <Typography sx={{ marginBottom: 3, color: "#fff" }}>
                   Semester {item.index}
                 </Typography>
                 <Grid container spacing={2} sx={{ marginBottom: 3 }}>

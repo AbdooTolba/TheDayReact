@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, Suspense, lazy } from "react";
 import Header from "../../components/Header";
 
 import { useState } from "react";
 import { CssBaseline, Paper, Box } from "@mui/material";
-import Main from "./Main.jsx";
+
+const Main = lazy(() => import("./Main.jsx"));
 
 const App = () => {
   const [search, setSearch] = useState("");
@@ -28,7 +29,9 @@ const App = () => {
           m: 2,
         }}
       >
-        <Main search={search} />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Main search={search} />
+        </Suspense>
       </Box>
     </>
   );

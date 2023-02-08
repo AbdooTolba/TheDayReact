@@ -54,10 +54,9 @@ export default function VerticalTabs(props) {
         flexGrow: 1,
         position: "relative",
         height: "100%",
-        width: "100vw",
         display: {
-          xs: "none",
-          sm: "flex",
+          md: "none",
+          lg: "flex",
         },
       }}
     >

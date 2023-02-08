@@ -5,6 +5,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import DeleteIcon from "@mui/icons-material/Delete";
+import Tooltip from "@mui/material/Tooltip";
 
 export default function BasicCard({ title, body, handelDelete, item }) {
   return (
@@ -15,14 +16,17 @@ export default function BasicCard({ title, body, handelDelete, item }) {
         </Typography>
 
         <Typography variant="body2">{body}</Typography>
-        <Button
-          sx={{ position: "relative", right: "-85%" }}
-          onClick={() => handelDelete(item)}
-        >
-          <IconButton aria-label="delete">
-            <DeleteIcon />
-          </IconButton>
-        </Button>
+
+        <Tooltip title="Delete">
+          <Button
+            sx={{ position: "relative", right: "-85%" }}
+            onClick={() => handelDelete(item)}
+          >
+            <IconButton aria-label="delete">
+              <DeleteIcon />
+            </IconButton>
+          </Button>
+        </Tooltip>
       </CardContent>
     </Card>
   );
