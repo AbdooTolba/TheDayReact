@@ -55,8 +55,8 @@ export default function VerticalTabs(props) {
         position: "relative",
         height: "100%",
         display: {
-          md: "none",
-          lg: "flex",
+          xs: "none",
+          md: "flex",
         },
       }}
     >

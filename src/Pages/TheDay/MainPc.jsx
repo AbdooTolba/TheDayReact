@@ -6,7 +6,7 @@ import { Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
 
-function Mainpc({ search }) {
+export default function MainPc({ search, curretnSemester }) {
   const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === "dark" ? "#232323" : "#fff",
     ...theme.typography.body2,
@@ -19,17 +19,18 @@ function Mainpc({ search }) {
   }));
 
   return (
-    <Box
-      sx={{
-        m: 2,
-        display: {
-          xs: "none",
-          sm: "block",
-        },
-      }}
-    >
-      <Grid container spacing={2}>
-        {/*Filter for search
+    <>
+      <Box
+        sx={{
+          m: 2,
+          display: {
+            xs: "none",
+            sm: "block",
+          },
+        }}
+      >
+        <Grid container spacing={2}>
+          {/*Filter for search
 1-Semesters
 2-Subjects
 3-doctors
@@ -37,58 +38,61 @@ function Mainpc({ search }) {
 5-Appreviation
 .filter?
 */}
-        {data.semesters
-          .filter(
-            (x) =>
-              x.subjects.filter(
-                (y) =>
-                  y.name.toLowerCase().includes(search.toLowerCase()) ||
-                  y.appreviation.toLowerCase().includes(search.toLowerCase()) ||
-                  y.doctor.toLowerCase().includes(search.toLowerCase())
-              ).length > 0
-          )
-          .map((item) => (
-            <Grid item xs={4}>
-              <Item
-                sx={{
-                  minHeight: "100%",
-                  transition: "all 0.2s",
-                  "&:hover": {
-                    WebkitBoxShadow: "0px 0px 5px 1px rgb(0 0 0 / 50%)",
-                    MozBoxShadow: "0px 0px 5px 1px rgba(0, 0, 0, 0.5)",
-                    boxShadow: "0px 0px 5px 1px rgb(0 0 0 / 50%)",
-                    transform: "scale(1.1)",
-                  },
-                }}
-              >
-                <Typography sx={{ marginBottom: 3, color: "#fff" }}>
-                  Semester {item.index}
-                </Typography>
-                <Grid container spacing={2} sx={{ marginBottom: 3 }}>
-                  {item.subjects
-                    .filter(
-                      (y) =>
-                        y.name.toLowerCase().includes(search.toLowerCase()) ||
-                        y.appreviation
-                          .toLowerCase()
-                          .includes(search.toLowerCase()) ||
-                        y.doctor.toLowerCase().includes(search.toLowerCase())
-                    )
-                    .map((subjects) => (
-                      <Grid item>
-                        <Dialog
-                          label={subjects.appreviation}
-                          subject={subjects}
-                        />
-                      </Grid>
-                    ))}
-                </Grid>
-              </Item>
-            </Grid>
-          ))}
-      </Grid>
-    </Box>
+          {data.semesters
+            .filter(
+              (x) =>
+                x.subjects.filter(
+                  (y) =>
+                    y.name.toLowerCase().includes(search.toLowerCase()) ||
+                    y.appreviation
+                      .toLowerCase()
+                      .includes(search.toLowerCase()) ||
+                    y.doctor.toLowerCase().includes(search.toLowerCase())
+                ).length > 0
+            )
+            .map((item) => (
+              <Grid item xs={4}>
+                <Item
+                  sx={{
+                    minHeight: "100%",
+                    transition: "all 0.2s",
+                    "&:hover": {
+                      WebkitBoxShadow: "0px 0px 5px 1px rgb(0 0 0 / 50%)",
+                      MozBoxShadow: "0px 0px 5px 1px rgba(0, 0, 0, 0.5)",
+                      boxShadow: "0px 0px 5px 1px rgb(0 0 0 / 50%)",
+                      transform: "scale(1.1)",
+                    },
+                  }}
+                >
+                  <Typography sx={{ marginBottom: 3, color: "#fff" }}>
+                    Semester {item.index}
+                  </Typography>
+                  <Grid container spacing={2} sx={{ marginBottom: 3 }}>
+                    {item.subjects
+                      .filter(
+                        (y) =>
+                          y.name.toLowerCase().includes(search.toLowerCase()) ||
+                          y.appreviation
+                            .toLowerCase()
+                            .includes(search.toLowerCase()) ||
+                          y.doctor.toLowerCase().includes(search.toLowerCase())
+                      )
+                      .map((subjects) => (
+                        <Grid item>
+                          <Dialog
+                            curretnSemester={curretnSemester}
+                            index={item.index}
+                            label={subjects.appreviation}
+                            subject={subjects}
+                          />
+                        </Grid>
+                      ))}
+                  </Grid>
+                </Item>
+              </Grid>
+            ))}
+        </Grid>
+      </Box>
+    </>
   );
 }
-
-export default Mainpc;

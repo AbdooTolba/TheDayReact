@@ -91,25 +91,25 @@ export default function Header({ search, setSearch, title, isSearch }) {
           >
             <MenuIcon />
           </IconButton> */}
-          <Tooltip title="Home" placement="bottom-start">
-            <Typography
-              variant="h5"
-              noWrap
-              component="div"
-              sx={{
-                flexGrow: 1,
-                display: "block",
-                fontSize: { sm: "1.5rem", xs: "1.5rem" },
-              }}
-            >
+          <Typography
+            variant="h5"
+            noWrap
+            component="div"
+            sx={{
+              flexGrow: 1,
+              display: "block",
+              fontSize: { sm: "1.5rem", xs: "1.5rem" },
+            }}
+          >
+            <Tooltip title="Home" placement="bottom-start">
               <RouterLink
                 to="/"
                 style={{ textDecoration: "none", color: "white" }}
               >
                 {title}
               </RouterLink>
-            </Typography>
-          </Tooltip>
+            </Tooltip>
+          </Typography>
           {/* <LinkMUI 
               component={
                 RouterLink  
@@ -170,8 +170,8 @@ export default function Header({ search, setSearch, title, isSearch }) {
               />
             </IconButton>
           </Tooltip>
-          <Tooltip title="Search">
-            {isSearch && (
+          {isSearch && (
+            <Tooltip title="Search">
               <Search>
                 <SearchIconWrapper>
                   <SearchIcon />
@@ -183,8 +183,8 @@ export default function Header({ search, setSearch, title, isSearch }) {
                   inputProps={{ "aria-label": "search" }}
                 />
               </Search>
-            )}
-          </Tooltip>
+            </Tooltip>
+          )}
         </Toolbar>
       </AppBar>
     </Box>

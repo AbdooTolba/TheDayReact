@@ -8,7 +8,12 @@ import DialogTitle from "@mui/material/DialogTitle";
 import Chip from "@mui/material/Chip";
 import { Box } from "@mui/material";
 
-export default function AlertDialog({ label, subject }) {
+export default function AlertDialog({
+  label,
+  subject,
+  index,
+  curretnSemester,
+}) {
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -61,9 +66,8 @@ export default function AlertDialog({ label, subject }) {
         className="subject__chip"
         label={label}
         clickable
-        component={"a"}
-        href={/subject/ + subject.appreviation}
-        // onClick={handleClickOpen}
+        // component={"a"}
+        onClick={handleClickOpen}
       />
       <Dialog
         open={open}
@@ -71,11 +75,36 @@ export default function AlertDialog({ label, subject }) {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogTitle id="alert-dialog-title">{subject.name}</DialogTitle>
+        <DialogTitle id="alert-dialog-title" sx={{ textAlign: "center" }}>
+          Are you in semester {index} ?{" "}
+        </DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
             <Box display="flex" sx={{ m: 1 }}>
-              <Chip
+              {/* two buttons one says yes other says no */}
+              <Button
+                sx={{ m: 2 }}
+                variant="contained"
+                onClick={() => {
+                  // store in local storage index as and key and index as value
+                  localStorage.setItem("semester", index);
+                  // redirect to subject page
+                  window.location.href = "/subject/" + subject.appreviation;
+                }}
+              >
+                Yes
+              </Button>
+              <Button
+                sx={{ m: 2 }}
+                variant="contained"
+                onClick={() => {
+                  window.location.href = "/subject/" + subject.appreviation;
+                }}
+              >
+                No
+              </Button>
+
+              {/* <Chip
                 component={"a"}
                 href={/subject/ + subject.appreviation}
                 target="_blank"
@@ -101,7 +130,7 @@ export default function AlertDialog({ label, subject }) {
                   console.log(subject.schdule);
                 }}
                 clickable
-              />
+              /> */}
             </Box>
           </DialogContentText>
         </DialogContent>

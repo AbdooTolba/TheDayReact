@@ -17,16 +17,16 @@ export default function BasicCard({ title, body, handelDelete, item }) {
 
         <Typography variant="body2">{body}</Typography>
 
-        <Tooltip title="Delete">
-          <Button
-            sx={{ position: "relative", right: "-85%" }}
-            onClick={() => handelDelete(item)}
-          >
-            <IconButton aria-label="delete">
+        <Button
+          sx={{ position: "relative", right: "-85%" }}
+          onClick={() => handelDelete(item)}
+        >
+          <IconButton aria-label="delete">
+            <Tooltip title="Delete">
               <DeleteIcon />
-            </IconButton>
-          </Button>
-        </Tooltip>
+            </Tooltip>
+          </IconButton>
+        </Button>
       </CardContent>
     </Card>
   );

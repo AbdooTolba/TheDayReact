@@ -42,16 +42,16 @@ export default function FormDialog(props) {
 
   return (
     <div>
-      <Tooltip title="Add">
-        <Fab
-          color="primary"
-          aria-label="add"
-          onClick={handleClickOpen}
-          sx={{ position: "fixed", right: "10px", bottom: "10px" }}
-        >
+      <Fab
+        color="primary"
+        aria-label="add"
+        onClick={handleClickOpen}
+        sx={{ position: "fixed", right: "10px", bottom: "10px" }}
+      >
+        <Tooltip title="Add">
           <AddIcon />
-        </Fab>
-      </Tooltip>
+        </Tooltip>
+      </Fab>
       <Dialog open={open} onClose={handleClose}>
         <DialogTitle>Keeper</DialogTitle>
         <DialogContent>

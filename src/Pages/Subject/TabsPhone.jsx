@@ -53,8 +53,8 @@ export default function BasicTabs(props) {
       sx={{
         width: "100%",
         display: {
-          md: "block",
-          lg: "none",
+          xs: "block",
+          md: "none",
         },
       }}
     >

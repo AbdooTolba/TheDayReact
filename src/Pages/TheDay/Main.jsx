@@ -1,18 +1,14 @@
+import React, { useState } from "react";
 import Box from "@mui/material/Box";
-import data from "../../Data/data.json";
-import Grid from "@mui/material/Grid";
-import Dialog from "./Dialog";
 import { Typography } from "@mui/material";
-import { styled } from "@mui/material/styles";
-import Paper from "@mui/material/Paper";
 import MainPc from "./MainPc";
 import MainPhone from "./MainPhone";
 
-function Main({ search }) {
+function Main({ search, curretnSemester }) {
   return (
     <>
-      <MainPc search={search} />
-      <MainPhone search={search} />
+      <MainPc search={search} curretnSemester={curretnSemester} />
+      <MainPhone search={search} curretnSemester={curretnSemester} />
       <br />
       <Box
         sx={{
