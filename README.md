@@ -1,5 +1,7 @@
 # TODO
 
+    -[ ] if there is no any matches for search, show somthing
+
     -[ ] Events for every group like exams or submtions
 
     -[ ] Section for groups tables

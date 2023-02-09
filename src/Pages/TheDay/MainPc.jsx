@@ -38,6 +38,7 @@ export default function MainPc({ search, curretnSemester }) {
 5-Appreviation
 .filter?
 */}
+
           {data.semesters
             .filter(
               (x) =>
