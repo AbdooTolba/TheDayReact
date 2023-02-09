@@ -1,5 +1,9 @@
 # TODO
 
+    -[ ] Events for every group like exams or submtions
+
+    -[ ] Section for groups tables
+
     -[ ] Theme darkmode/lightmode switch using (useContext , ThemeProvider)
 
     -[ ] Items in materials are shifted to the left, there is some hidden...
