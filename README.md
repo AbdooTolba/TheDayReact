@@ -8,11 +8,11 @@
 
     -[ ] Theme darkmode/lightmode switch using (useContext , ThemeProvider)
 
-    -[ ] Items in materials are shifted to the left, there is some hidden...
-
 # Doing
 
 # DONE
+
+    -[X] Items in materials are shifted to the left, there is some hidden...
 
     -[X] add a dialog onclicking any subject and check if he is in this semester, if yes store locally that, and show that semester on top, in phone show the card shape on top of all acordians
 

@@ -4,8 +4,9 @@ import "./Styling/Material.css";
 function Material({
   name,
   appreviation,
+  material, // subject => 1-lecture 2-whitenning 3-section
+
   doctor,
-  material,
   PreviousExams,
   schdule,
   description,
@@ -13,7 +14,7 @@ function Material({
   const containerStyle = {
     display: "flex",
     flexWrap: "noWrap",
-    justifyContent: "center",
+    justifyContent: "flex-start",
     width: "80vw",
     overflowX: "scroll",
   };
